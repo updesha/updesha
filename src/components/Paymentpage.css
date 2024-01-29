@@ -1,77 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
 body {
-    font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(62,62,203,1) 35%, rgba(0,212,255,1) 100%);  }
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(62,62,203,1) 35%, rgba(0,212,255,1) 100%);
+}
+
 h2 {
   font-size: 4.5rem;
   margin-bottom: 20px;
 }
+
 li {
   font-size: x-large;
+  color: green; /* Corrected color property */
 }
+
 div {
-  align-self: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
+  justify-content: center;
 }
-    input {
-  width: 61%;
+
+input {
+  width: 100%; /* Make input fields take up the full width of the form */
   height: 5vh;
+  margin-bottom: 15px; /* Added margin to separate input fields */
 }
+label {
+  display: block;
+  margin-top: 8px;
+  text-align: left; /* Align labels to the left */
+}
+
+
+form {
+  max-width: 400px;
+  width: 100%;
+  padding: 2vh;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: black;
+  margin-top: 20px; /* Added margin for separation from the bullet points box */
+  text-align: center; /* Center align all text in the form */
+}
+label {
+  display: block;
+  margin-top: 8px;
+}
+
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50%;
+  transition-duration: 0.30s;
+}
+
+button:hover {
+  background-color: #45a049;
+  transition-duration: 0.30s;
+  width: 70%;
+}
+
+.info {
+  border-bottom: 1px solid #45a049; /* Added border style */
+}
+
+/* BulletPointsBox.css */
+
+.bullet-points-box {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-self: center;
+  margin-top: 5%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 5%;
+}
+
+li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  color: green; /* Corrected color property */
+}
+
+li::before {
+  content: '\2022';
+  color: #007bff;
+  font-size: 1.2em;
+  position: absolute;
+  left: -15px;
+}
+
+@media screen and (max-width: 600px) {
   form {
-    max-width: 400px;
-    width: 100%;
-    padding: 2vh;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    background-color: black blur;
+    max-width: 100%;
   }
-  label {
-    display: block;
-    margin-top: 8px;
-  }
-  
-  select, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #2b4162;
-    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
-    color: #fff;
-    border: none;
-    padding: 15px;
-    margin-top: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 50%;
-    transition-duration: 0.30s;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-    transition-duration: 0.30s;
-    width: 70%;
-    
-  }
-  .info {
-    border-bottom: #45a049;
-  }
-  @media screen and (max-width: 600px) {
-    form {
-      max-width: 100%;
-    }
-  }
-  
+}

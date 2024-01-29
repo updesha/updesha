@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // for making HTTP requests
 import './Paymentpage.css'
+import Logo from './Logo'
 const CoursePurchase = () => {
   const [studentDetails, setStudentDetails] = useState({
     name: '',
@@ -64,7 +65,7 @@ const CoursePurchase = () => {
 
   return (
     <div>
-      <h2>Updesha</h2>
+    <div>
       <div className='form-back'>
       <form>
         <label htmlFor="name">Enter Your Name:</label>
@@ -87,14 +88,24 @@ const CoursePurchase = () => {
         </button>
       </form>
       </div>
-      <div className='info'>
+      <Logo />
+      <div className="bullet-points-box">
       <ul>
-        <li>Customized Study Plans : Tailored strategies that align with your unique learning style, focusing on maximizing your strengths and improving your weaknesses.</li>
-        <li>One-on-One Mentorship Sessions : Benefit from regular personalized sessions, ensuring that your doubts are addressed promptly and effectively.</li>
-        <li>Top mentors : Get mentored by top rankers from Top IITs and learn from their strategies that will not only help you ace jee but in life too.</li>
-        <li>Cheapest mentorship : As promised, we know the situation of families most of us are from. The aim is to provide the best under a reasonable rate.</li>
+        <li>
+        Customized Study Plans : Tailored strategies that align with your unique learning style, focusing on maximizing your strengths and improving your weaknesses.
+        </li>
+        <li>
+        One-on-One Mentorship Sessions : Benefit from regular personalized sessions, ensuring that your doubts are addressed promptly and effectively.
+        </li>
+        <li>
+        Top mentors : Get mentored by top rankers from Top IITs and learn from their strategies that will not only help you ace jee but in life too
+        </li>
+        <li>
+        Cheapest mentorship : As promised, we know the situation of families most of us are from. The aim is to provide the best under a reasonable rate.
+        </li>
       </ul>
-      </div>
+    </div>
+    </div>
     </div>
     
   );
